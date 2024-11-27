@@ -1,0 +1,15 @@
+[Unit]
+Description=The net boring machine
+After=network.target
+
+[Service]
+PIDFile=/run/boringnet.pid
+ExecStart=/usr/local/boringnet/boring.py
+KillSignal=SIGINT
+Type=simple
+Restart=always
+
+
+[Install]
+WantedBy=default.target
+RequiredBy=network.target

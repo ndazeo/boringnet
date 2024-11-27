@@ -1,0 +1,10 @@
+MyServer:
+    IP: 192.168.10.111
+    Port: 2222 # Optional
+    User: user # Optional 
+    IdentityFile: /path/to/remote_id_rsa # Optional
+    Tunnels:
+    - Remote: 192.168.10.123
+      Ports:
+        - 8080:80 # Use 8080 as local for remote 80
+        - 5000 # Same local and remote port
